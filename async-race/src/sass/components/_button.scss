@@ -1,0 +1,156 @@
+.btn {
+  font-family: 'Baloo Thambi 2', cursive;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  color: $white-color;
+  background: $secondary-color;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 25px;
+  box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5);
+  outline: none;
+  position: relative;
+  display: inline-block;
+  transition: all .3s ease;
+  opacity: 0.9;
+}
+
+.btn:active {
+  top: 2px;
+}
+
+.btn.disabled {
+  pointer-events: none;
+  background-color: $grey-color;
+  color: $black-color;
+}
+
+.btn:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  border-radius: 5px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.btn:hover:after {
+  left: 0;
+  width: 100%;
+}
+
+.select-btn {
+  background: $fiolet-color;
+  z-index: 1;
+}
+
+.select-btn:after {
+  background-color: $fiolet-color-dark;
+}
+
+.delete-btn {
+  background: $orange-color;
+  z-index: 1;
+}
+
+.delete-btn:after {
+  background-color: $orange-color-dark;
+}
+
+.start-race-btn,
+.reset-race-btn,
+.select-btn,
+.delete-btn {
+  padding: 0px 12px;
+  min-height: 42px;
+}
+
+@media screen and (max-width: 768px) {
+  .start-race-btn,
+  .reset-race-btn,
+  .select-btn,
+  .delete-btn {
+    padding: 0px 4px;
+    font-size: 12px;
+  }
+}
+
+.start-race-btn.disabled,
+.race-all-btn.disabled {
+  color: $black-color;
+}
+
+.start-race-btn,
+.race-all-btn {
+  text-transform: uppercase;
+  font-size: 16px;
+  background: $green-color;
+  z-index: 1;
+}
+
+.start-race-btn:after,
+.race-all-btn:after {
+  background-color: $green-color-dark;
+}
+
+.reset-race-btn,
+.reset-all-btn {
+  background: $red-color;
+  z-index: 1;
+}
+
+.reset-race-btn:after,
+.reset-all-btn:after {
+  background-color: $red-color-dark;
+}
+
+.prev-btn,
+.next-btn,
+.create-btn,
+.update-btn,
+.generate-btn {
+  background: $blue-color;
+  z-index: 1;
+}
+
+.prev-btn,
+.next-btn {
+  font-family: 'Bangers', cursive;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.prev-btn.disabled,
+.next-btn.disabled {
+  pointer-events: none;
+  background-color: $grey-color;
+  color: $primary-color;
+}
+
+.prev-btn:after,
+.next-btn:after,
+.create-btn:after,
+.update-btn:after,
+.generate-btn:after {
+  background-color: $blue-color-dark;
+}
+
+.create-btn,
+.update-btn,
+.race-all-btn,
+.reset-all-btn {
+  min-width: 130px;
+}
+
+.generate-btn {
+  min-width: 150px;
+}

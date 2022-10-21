@@ -1,0 +1,191 @@
+.manage-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .manage-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.manage-cars {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f4f4f4;
+  max-width: 480px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: rgb(0 0 0 / 16%) 0px 1px 3px;
+
+  &__create-car,
+  &__update-car {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__update-car.disabled {
+    pointer-events: none;
+    opacity: 0.3;
+    background-color: $grey-color;
+  }
+
+  &__color {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.selection {
+  display: flex;
+  align-items: center;
+}
+
+.winner-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 15px 40px;
+  border-radius: 5px;
+  min-width: 480px;
+  min-height: 170px;
+  box-shadow: rgb(0 0 0 / 16%) 0px 1px 3px;
+  position: relative;
+  overflow: hidden;
+
+  &__name-wrapper,
+  &__time-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__title,
+  &__time {
+    font-size: 22px;
+  }
+
+  &__name,
+  &__race-time {
+    font-family: "Bangers", cursive;
+    font-size: 25px;
+    color: $orange-color;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .winner-message {
+    min-width: 450px;
+  }
+}
+
+.line-one,
+.line-two,
+.line-thre,
+.line-four {
+  display: none;
+}
+
+.winner-message.active {
+  background-color: $blue-color-light;
+}
+
+.winner-message.active .line-one {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, $orange-color);
+  animation: animateOne 1s linear infinite;
+}
+
+.winner-message.active .line-two {
+  position: absolute;
+  display: block;
+  top: -100%;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, $orange-color);
+  animation: animateTwo 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+.winner-message.active .line-three {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(270deg,transparent, $orange-color);
+  animation: animateThree 1s linear infinite;
+  animation-delay: 0.50s;
+}
+
+.winner-message.active .line-four {
+  position: absolute;
+  display: block;
+  bottom: -100%;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,$orange-color);
+  animation: animateFour 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes animateOne {
+  0% {
+      left: -100%;
+  }
+  50%,
+  100% {
+      left: 100%;
+  }
+}
+
+@keyframes animateTwo {
+  0% {
+      top: -100%;
+  }
+  50%,
+  100% {
+      top: 100%;
+  }
+}
+
+@keyframes animateThree {
+  0% {
+      right: -100%;
+  }
+  50%,
+  100% {
+      right: 100%;
+  }
+}
+
+@keyframes animateFour {
+  0% {
+      bottom: -100%;
+  }
+  50%,
+  100% {
+      bottom: 100%;
+  }
+}

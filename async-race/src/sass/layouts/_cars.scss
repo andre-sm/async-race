@@ -1,0 +1,75 @@
+.cars {
+  
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__garage {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+    margin-bottom: 30px;
+    background-color: #f4f4f4;
+  }
+  
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+.car {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px 10px;
+
+  &__race {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__race-btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+  }
+
+  &__road {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    border-top: 5px solid #65b06a;
+    border-bottom: 5px solid #65b06a;
+    border-radius: 5px;
+    background: #3d3d3d url('../assets/img/line.png') repeat-x center left;
+  }
+
+  &__finish {
+    width: 135px;
+    height: 80px;
+    margin-left: auto;
+    background: #3d3d3d url('../assets/img/finish.svg') no-repeat;
+  }
+
+  @media screen and (max-width: 768px) {
+    &__finish {
+      width: 120px;
+    }
+  }
+}
+
+.car-icon {
+  display: flex;
+  height: 40px;
+  width: 81px;
+  position: relative;
+}

@@ -1,0 +1,35 @@
+.footer {
+  margin-top: 30px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 14px;
+    color: #333;
+  }
+
+  &__github-link {
+    color: #333;
+    text-decoration: none;
+  } 
+  
+  &__github-link:hover {
+    color: #626262;
+    transition: .3s;
+  }
+
+  &__rss-logo {
+    display: block;
+    content: '';
+    background-image: url('../assets/img/rs-school.svg');
+    width: 86px;
+    height: 32px;
+    cursor: pointer;
+  }
+}
