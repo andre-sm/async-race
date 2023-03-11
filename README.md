@@ -1,4 +1,4 @@
-## RS School 2022 Q1 Async Race Task
+## RS School 2022Q1 "Async Race" Task
 #### Task: [Async Race](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/async-race.md)
 #### [Deploy](https://rolling-scopes-school.github.io/andre-sm-JSFE2022Q1/async-race/)
 #### [Async Race API](https://github.com/mikhama/async-race-api)
